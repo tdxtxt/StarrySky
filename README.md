@@ -58,28 +58,28 @@ maven{
 若要支持 dash 类流音频，请另外导入
 ```groovy
 dependencies {
-    implementation 'com.google.android.exoplayer:exoplayer-dash:2.9.4'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.4'
 }
 ```
 
 若要支持 hls 类流音频，请另外导入
 ```groovy
 dependencies {
-    implementation 'com.google.android.exoplayer:exoplayer-hls:2.9.4'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.10.4'
 }
 ```
 
 若要支持 smoothstreaming 类流音频，请另外导入
 ```groovy
 dependencies {
-    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.4'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.10.4'
 }
 ```
 
 若要支持 rtmp 类流音频，请另外导入
 ```groovy
 dependencies {
-    implementation 'com.google.android.exoplayer:extension-rtmp:2.9.4'
+    implementation 'com.google.android.exoplayer:extension-rtmp:2.10.4'
 }
 ```
 
@@ -122,6 +122,13 @@ PS：
 - 如果发现库中功能满足不了你的需求，建议通过下载源码修改成你要的样子来使用。
 - 如果该项目对你有所帮助，欢迎 star 或 fork，谢谢各位。
 
+## 成功案例
+
+StarrySky 目前为止有 **8100+** 的下载量，感谢各位开发者的支持，下面是部分 app 成功案例。
+
+<a href="art/成功案例.png"><img src="art/成功案例.png"/></a>
+
+（如有违法或者侵权行为请联系我删除！）
 
 
 ## QQ群
