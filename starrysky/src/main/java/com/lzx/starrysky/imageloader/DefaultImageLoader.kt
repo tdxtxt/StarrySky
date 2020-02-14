@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
-import android.support.v4.util.LruCache
 import java.io.BufferedInputStream
 import java.io.IOException
 import java.io.InputStream
@@ -25,12 +24,12 @@ class DefaultImageLoader : ImageLoaderStrategy {
         private const val ICON_BITMAP_INDEX = 1
     }
 
-    private var mCache: LruCache<String, Array<Bitmap>>
+    private var mCache: androidx.collection.LruCache<String, Array<Bitmap>>
 
     init {
         val maxSize = MAX_ALBUM_ART_CACHE_SIZE.coerceAtMost(
             Integer.MAX_VALUE.toLong().coerceAtMost(Runtime.getRuntime().maxMemory() / 4).toInt())
-        mCache = object : LruCache<String, Array<Bitmap>>(maxSize) {
+        mCache = object : androidx.collection.LruCache<String, Array<Bitmap>>(maxSize) {
             override fun sizeOf(key: String, value: Array<Bitmap>): Int {
                 return value[BIG_BITMAP_INDEX].byteCount + value[ICON_BITMAP_INDEX].byteCount
             }
@@ -52,7 +51,7 @@ class DefaultImageLoader : ImageLoaderStrategy {
 
     private class BitmapAsyncTask internal constructor(
         private val artUrl: String, private val listener: ImageLoaderCallBack?,
-        private val mCache: LruCache<String, Array<Bitmap>>
+        private val mCache: androidx.collection.LruCache<String, Array<Bitmap>>
     ) : AsyncTask<Void, Void, Array<Bitmap>>() {
 
         override fun doInBackground(vararg voids: Void): Array<Bitmap>? {

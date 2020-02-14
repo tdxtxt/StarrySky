@@ -1,7 +1,7 @@
 package com.lzx.starrysky.registry;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.lzx.starrysky.imageloader.ImageLoader;
 import com.lzx.starrysky.imageloader.ImageLoaderStrategy;

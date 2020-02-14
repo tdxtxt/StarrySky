@@ -15,15 +15,10 @@ import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory
 import com.google.android.exoplayer2.upstream.cache.Cache
 import com.google.android.exoplayer2.upstream.cache.CacheDataSource
 import com.google.android.exoplayer2.upstream.cache.CacheDataSourceFactory
-import com.google.android.exoplayer2.upstream.cache.CacheSpan
-import com.google.android.exoplayer2.upstream.cache.CacheUtil
-import com.google.android.exoplayer2.upstream.cache.LeastRecentlyUsedCacheEvictor
-import com.google.android.exoplayer2.upstream.cache.SimpleCache
 import com.google.android.exoplayer2.util.Util
 import com.lzx.starrysky.StarrySky
 import com.lzx.starrysky.playback.offline.StarrySkyCacheManager
 import com.lzx.starrysky.utils.StarrySkyUtils
-import java.io.File
 
 class ExoSourceManager constructor(
     private val context: Context, private val cacheManager: StarrySkyCacheManager
@@ -219,8 +214,7 @@ class ExoSourceManager constructor(
             if (cls.name == clazz.name + "\$Factory") {
                 val constructors = cls.getConstructor(DataSource.Factory::class.java)
                 constructors.isAccessible = true
-                return constructors.newInstance(
-                    dataSourceFactory) as AdsMediaSource.MediaSourceFactory
+                return constructors.newInstance(dataSourceFactory) as AdsMediaSource.MediaSourceFactory
             }
         }
 

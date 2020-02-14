@@ -9,7 +9,6 @@ import com.google.android.exoplayer2.upstream.cache.CacheUtil
 import com.google.android.exoplayer2.upstream.cache.LeastRecentlyUsedCacheEvictor
 import com.google.android.exoplayer2.upstream.cache.SimpleCache
 import com.lzx.starrysky.playback.player.ExoSourceManager
-import com.lzx.starrysky.utils.StarrySkyUtils
 import java.io.File
 
 class StarrySkyCacheManager constructor(

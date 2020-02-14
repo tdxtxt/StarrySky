@@ -2,7 +2,7 @@ package com.lzx.starrysky;
 
 import android.app.Application;
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.lzx.starrysky.common.IMediaConnection;
 import com.lzx.starrysky.control.PlayerControl;

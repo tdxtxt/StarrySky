@@ -187,7 +187,7 @@ open class ExoPlayback internal constructor(
             val currSpeed = mExoPlayer!!.playbackParameters.speed
             val currPitch = mExoPlayer!!.playbackParameters.pitch
             val newSpeed = currSpeed + 0.5f
-            mExoPlayer!!.playbackParameters = PlaybackParameters(newSpeed, currPitch)
+            mExoPlayer!!.setPlaybackParameters(PlaybackParameters(newSpeed, currPitch))
         }
     }
 
@@ -199,7 +199,7 @@ open class ExoPlayback internal constructor(
             if (newSpeed <= 0) {
                 newSpeed = 0f
             }
-            mExoPlayer!!.playbackParameters = PlaybackParameters(newSpeed, currPitch)
+            mExoPlayer!!.setPlaybackParameters(PlaybackParameters(newSpeed, currPitch))
         }
     }
 
@@ -209,7 +209,7 @@ open class ExoPlayback internal constructor(
             val currPitch = mExoPlayer!!.playbackParameters.pitch
             val newSpeed = if (refer) currSpeed * multiple else multiple
             if (newSpeed > 0) {
-                mExoPlayer!!.playbackParameters = PlaybackParameters(newSpeed, currPitch)
+                mExoPlayer!!.setPlaybackParameters(PlaybackParameters(newSpeed, currPitch))
             }
         }
     }
@@ -229,15 +229,6 @@ open class ExoPlayback internal constructor(
     }
 
     private inner class ExoPlayerEventListener : Player.EventListener {
-        override fun onTimelineChanged(timeline: Timeline?, manifest: Any?, reason: Int) {
-            // Nothing to do.
-        }
-
-        override fun onTracksChanged(
-            trackGroups: TrackGroupArray?, trackSelections: TrackSelectionArray?
-        ) {
-            // Nothing to do.
-        }
 
         override fun onLoadingChanged(isLoading: Boolean) {
             // Nothing to do.
@@ -262,10 +253,6 @@ open class ExoPlayback internal constructor(
         }
 
         override fun onPositionDiscontinuity(reason: Int) {
-            // Nothing to do.
-        }
-
-        override fun onPlaybackParametersChanged(playbackParameters: PlaybackParameters?) {
             // Nothing to do.
         }
 

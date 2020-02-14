@@ -1,7 +1,6 @@
 package com.lzx.starrysky.common
 
 import java.util.ArrayDeque
-import java.util.Queue
 
 abstract class BaseKey<T> {
 

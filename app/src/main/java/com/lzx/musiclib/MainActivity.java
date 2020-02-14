@@ -4,13 +4,11 @@ package com.lzx.musiclib;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.lzx.musiclib.example.ListPlayExampleActivity;
 import com.lzx.musiclib.example.PlayDetailActivity;
 import com.lzx.musiclib.example.RequestBeforePlayActivity;
-import com.lzx.starrysky.StarrySky;
-import com.lzx.starrysky.provider.SongInfo;
 
 public class MainActivity extends AppCompatActivity {
 

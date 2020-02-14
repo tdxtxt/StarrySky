@@ -1,7 +1,6 @@
 package com.lzx.starrysky.ext
 
 import android.os.SystemClock
-import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.PlaybackStateCompat
 
 /**

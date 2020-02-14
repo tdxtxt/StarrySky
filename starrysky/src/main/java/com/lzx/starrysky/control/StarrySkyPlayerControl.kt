@@ -1,7 +1,7 @@
 package com.lzx.starrysky.control
 
 import android.annotation.SuppressLint
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
